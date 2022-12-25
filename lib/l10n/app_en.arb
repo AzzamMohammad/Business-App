@@ -1,0 +1,472 @@
+{
+    "business":"BUSINESS",
+    "@language":{
+        "description":"BUSINESS"
+    },
+
+    "create_account":"Create Account",
+    "@language":{
+        "description":"Create Account"
+    },
+
+    "get_all_the_services":"Get all the services you are looking for quickly and safely",
+    "@language":{
+        "description":"Get all the services you are looking for quickly and safely"
+    },
+
+    "hurry_up_to_expand_your_business":"Hurry up to expand your business and deliver your products to all the world",
+    "@language":{
+        "description":"Hurry up to expand your business and deliver your products to all the world"
+    },
+
+    "ease_of_communication_between_the_client_and_the_customer":"Ease of communication between the client and the customer, which achieves the satisfaction of both parties",
+    "@language":{
+         "description":"Ease of communication between the client and the customer, which achieves the satisfaction of both parties"
+    },
+
+    "skip":"Skip",
+    "@language":{
+         "description":"skip"
+    },
+
+    "login":"Login",
+    "@language":{
+         "description":"Login"
+    },
+
+    "email":"Email",
+    "@language":{
+         "description":"email"
+    },
+
+    "enter_your_email":"Enter your email",
+    "@language":{
+         "description":"Enter your email"
+    },
+
+    "enter_a_valid_email":"Enter a valid email",
+    "@language":{
+         "description":"Enter a valid email"
+    },
+
+    "password":"Password",
+    "@language":{
+         "description":"password"
+    },
+
+    "enter_your_password":"Enter your password",
+    "@language":{
+         "description":"Enter your password"
+    },
+
+    "forget_Password":"Forget Password?",
+    "@language":{
+         "description":"forget Password"
+    },
+
+    "go_to":"Go to ",
+    "@language":{
+        "description":"go to text"
+    },
+
+    "sign_in":"Register",
+    "@language":{
+         "description":"sign in"
+    },
+
+    "reset_password":"reset password",
+    "@language":{
+         "description":"reset password"
+    },
+
+    "last_password":"Last password",
+    "@language":{
+         "description":"last Password"
+    },
+
+    "new_password":"New password",
+    "@language":{
+        "description":"new Password"
+    },
+
+    "config_password":"Config password",
+    "@language":{
+         "description":"config password"
+    },
+
+    "password_most_be_more_tha_8_characters":"Password most be more tha 8 characters",
+    "@language":{
+         "description":"Password most be more tha 8 characters"
+    },
+
+    "send_pin":"Send PIN",
+    "@language":{
+         "description":"send pin"
+    },
+
+    "pin":"PIN",
+    "@language":{
+        "description":"pin"
+    },
+
+    "enter_the_pin":"Enter the PIN",
+    "@language":{
+         "description":"Enter the PIN"
+    },
+
+    "resend_pin":"Resend PIN",
+    "@language":{
+        "description":"Resend PIN"
+    },
+
+    "register":"Register",
+    "@language":{
+        "description":"register"
+    },
+
+    "first_name":"First name",
+    "@language":{
+         "description":"first_name"
+    },
+
+
+    "enter_your_first_name":"Enter your first name",
+    "@language":{
+         "description":"enter_your_first_name"
+    },
+
+
+    "last_name":"Last name",
+    "@language":{
+         "description":"last_name"
+    },
+
+    "user_name":"User name",
+    "@language":{
+         "description":"user_name"
+    },
+
+    "enter_your_user_name":"Enter your user name",
+    "@language":{
+         "description":"enter_your_user_name"
+     },
+
+
+    "enter_your_last_name":"Enter your last name",
+    "@language":{
+         "description":"enter_your_last_name"
+    },
+
+
+    "select_gender":"Select your gender",
+    "@language":{
+         "description":"select gender"
+    },
+
+
+    "select_date_of_birth":"Select your birth day",
+    "@language":{
+         "description":"select date of birth"
+    },
+
+
+    "select_country":"Select your country",
+    "@language":{
+         "description":"select country"
+    },
+
+
+    "select_city":"Select your city",
+    "@language":{
+         "description":"select city"
+    },
+
+
+    "select_town":"Select your town",
+    "@language":{
+         "description":"select town"
+    },
+
+    "phone_number":"phone number",
+    "@language":{
+        "description":" phone number"
+    },
+
+
+    "code":"Code",
+    "@language":{
+         "description":"Code"
+    },
+
+
+    "telephone_number":"Telephone number",
+    "@language":{
+         "description":"telephone_number"
+    },
+
+    "description_about_your_location":"Description about your location",
+    "@language":{
+        "description":"description_about_your_location"
+    },
+
+    "write_to_search":"Write to search",
+    "@language":{
+         "description":"write_to_search"
+    },
+
+    "connection_error":"Connection Error",
+    "@language":{
+        "description":"connection_error"
+    },
+
+    "check_your_connection":"Check your connection",
+    "@language":{
+         "description":"Check your connection"
+    },
+
+    "remember_me":"Remember me",
+    "@language":{
+         "description":"Remember me"
+    },
+
+    "confirm_account":"Confirm account",
+    "@language":{
+         "description":"Confirm account"
+    },
+
+    "send":"Send",
+    "@language":{
+         "description":"Send"
+    },
+
+    "you_must_confirm_your_account_the_code_has_been_sent_to_your_email":"You must confirm your account The code has been sent to your email",
+    "@language":{
+         "description":"You must confirm your account The code has been sent to your email"
+    },
+
+    "enter_your_email_to_send_the_verification_code":"Enter your email to send the verification code",
+    "@language":{
+         "description":"Enter your email to send the verification code"
+    },
+
+    "facility":"Facility",
+    "@language":{
+         "description":"facility"
+    },
+
+    "chat":"Chat",
+    "@language":{
+        "description":"chat"
+    },
+
+    "home":"Home",
+    "@language":{
+         "description":"Home"
+    },
+
+    "search":"Search",
+    "@language":{
+         "description":"search"
+    },
+
+    "settings":"Settings",
+    "@language":{
+         "description":"settings"
+    },
+
+    "next":"Next",
+    "@language":{
+         "description":"next"
+    },
+
+    "male":"Male",
+    "@language":{
+         "description":"Male"
+    },
+
+    "female":"Female",
+    "@language":{
+         "description":"Female"
+    },
+
+    "previous":"Previous",
+    "@language":{
+         "description":"Previous"
+    },
+
+    "password_and_confirmation_must_be_the_same":"Password and confirmation must be the same",
+    "@language":{
+         "description":"Password and confirmation must be the same"
+    },
+
+    "country":"Countery",
+    "@language":{
+        "description":"country"
+   },
+
+   "city":"City",
+   "@language":{
+        "description":"city"
+   },
+
+   "town":"Town",
+   "@language":{
+       "description":"town"
+   },
+
+   "go_to_location":"Go to location",
+   "@language":{
+       "description":"Go To Location"
+   },
+
+   "facility_images":"Facility images",
+   "@language":{
+       "description":"Facility images"
+   },
+
+   "show_all_images":"Show all images",
+   "@language":{
+       "description":"Show all images"
+   },
+
+   "minute":"Minute",
+   "@language":{
+       "description":"minute"
+   },
+
+   "hour":"Hour",
+   "@language":{
+       "description":"hour"
+   },
+
+   "day":"Day",
+   "@language":{
+       "description":"day"
+   },
+
+   "month":"Month",
+   "@language":{
+       "description":"month"
+   },
+
+   "week":"Week",
+   "@language":{
+      "description":"week"
+   },
+
+   "update":"Update",
+   "@language":{
+       "description":"update"
+   },
+
+   "delete":"Delete",
+   "@language":{
+       "description":"delete"
+   },
+
+   "job":"Job",
+   "@language":{
+       "description":"Job"
+   },
+
+   "offer":"offer",
+   "@language":{
+       "description":"offer"
+   },
+
+   "post_title":"Post title",
+   "@language":{
+       "description":"Post title"
+   },
+
+   "post_description":"Post description",
+   "@language":{
+      "description":"Post description"
+   },
+
+   "add_image":"Add image",
+   "@language":{
+       "description":"Add image"
+   },
+
+   "add_video":"Add Video",
+   "@language":{
+       "description":"Add Video"
+   },
+
+   "pleas_wait":"Pleas wait",
+   "@language":{
+       "description":"Pleas wait"
+   },
+
+   "new_image":"New image",
+   "@language":{
+       "description":"New Image"
+   },
+
+   "are_you_sure":"Are you sure ?",
+   "@language":{
+       "description":"Are you sure"
+   },
+
+   "yes":"Yes",
+   "@language":{
+       "description":"yes"
+   },
+
+   "go_back":"Go back",
+   "@language":{
+       "description":"go_back"
+   },
+
+   "press_back_again_to_exit":"Press back again to exit",
+   "@language":{
+       "description":"press_back_again_to_exit"
+   },
+
+   "post_description_is_required":"Post description is required",
+   "@language":{
+       "description":"Post description is required"
+   },
+
+   "post_title_is_required":"Post title is required",
+   "@language":{
+       "description":"Post title is required"
+   },
+
+   "post_image_is_required":"Post image is required",
+   "@language":{
+       "description":"Post image is required"
+   },
+
+   "members":"Members",
+   "@language":{
+       "description":"Members"
+   },
+
+   "update":"Update",
+   "@language":{
+       "description":"update"
+   },
+
+   "jobs":"Jobs",
+   "@language":{
+       "description":"Jobs"
+   },
+
+   "offers":"Offers",
+   "@language":{
+       "description":"Offers"
+   },
+
+
+   "no_data_to_display":"No data to display",
+   "@language":{
+       "description":"No data to display"
+   }
+
+
+
+
+
+}
