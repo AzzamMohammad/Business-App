@@ -1,9 +1,7 @@
 import 'dart:io';
-import 'package:business_01/components/get_path_to_facility.dart';
 import 'package:business_01/modules/facility/facility_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:get/get.dart';
 import '../../components/cach_image_from_network.dart';
 import '../../components/loading/loding_message.dart';
@@ -60,6 +58,7 @@ class FacilityScreen extends StatelessWidget {
           facilityController.FacilityScrollController.animateTo(0, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
           return false;
         }
+        Get.offAllNamed('/home_page');
         return true;
 
       },
@@ -125,7 +124,11 @@ class FacilityScreen extends StatelessWidget {
                                             ),
                                             Icon(
                                               Icons.people,
-                                              color: null,
+                                              color:Theme.of(context).colorScheme ==
+                                                  ColorScheme.light()
+                                                  ? Color(0xff1a1a1a)
+                                                  : Color(0xffefefef),
+                                              size: 25,
                                             ),
                                           ],
                                         ),
@@ -157,6 +160,11 @@ class FacilityScreen extends StatelessWidget {
                                             ),
                                             Icon(
                                               Icons.update,
+                                              color: Theme.of(context).colorScheme ==
+                                                  ColorScheme.light()
+                                                  ? Color(0xff1a1a1a)
+                                                  : Color(0xffefefef),
+                                              size: 25,
                                             ),
                                           ],
                                         ),
@@ -1383,7 +1391,7 @@ class FacilityScreen extends StatelessWidget {
 
     if(facilityController.State){
       loadingMessage.Dismiss();
-      Get.toNamed('/chat_messages',arguments: {'chat_id':facilityController.ChatWithFoundationId,'User_name':facilityController.facilityInformation.name,'user_image':facilityController.facilityInformation.photo,'IsFoundation':0,'Chat_is_blocked':false});
+      Get.toNamed('/chat_messages',arguments: {'User_name':facilityController.facilityInformation.name,'user_image':facilityController.facilityInformation.photo,'IsFoundation':0,'Chat_is_blocked':false},parameters: {'chat_id': '${facilityController.ChatWithFoundationId}'});
     }else{
       loadingMessage.DisplayError(
           Theme.of(context).scaffoldBackgroundColor,

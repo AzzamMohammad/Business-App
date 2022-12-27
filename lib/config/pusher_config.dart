@@ -44,20 +44,21 @@ PusherClient CreatePusherClient(String Token){
     encrypted: true,
     host: PusherConfig.hostEndPint,
     cluster:  PusherConfig.cluster,
-    auth:  PusherAuth(
-      PusherConfig.hostAuthEndPint,
-      headers: {
-        'Authorization' : 'Bearer $Token',
-        'Content-Type' : 'application/json',
-        'Accept' : 'application/json'
-      }
-    )
+
+    // auth:  PusherAuth(
+    //   PusherConfig.hostAuthEndPint,
+    //   headers: {
+    //     'Authorization' : 'Bearer $Token',
+    //     'Content-Type' : 'application/json',
+    //     'Accept' : 'application/json'
+    //   }
+    // )
   );
 
   PusherClient pusherClient = PusherClient(
     PusherConfig.kay,
     options,
-    autoConnect: false,
+    autoConnect: true,
     enableLogging: true
   );
 

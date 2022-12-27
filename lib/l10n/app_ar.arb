@@ -89,5 +89,21 @@
     "update":"تعديل",
     "jobs":"فرص عمل",
     "offers":"عروض",
-    "no_data_to_display":"لا يوجد بيانات لعرضها"
+    "no_data_to_display":"لا يوجد بيانات لعرضها",
+    "setting":"الإعدادات",
+    "change_language":"تغيير اللغة",
+    "logout":"تسجيل الخروج",
+    "un_block":"رفع الحظر",
+    "block":"حظر",
+    "no_message_yet":"... ما من رسائل",
+    "blocked":"محظور",
+    "you_can_not_send_to_this_person":"لا يمكنك مراسلة هذا الحساب",
+    "your_message":"..رسالتك",
+    "my_facilities":"منشآتي",
+    "start_your_business":"ابدأ عملك",
+    "neww":"جديد",
+    "new_member":"عضو جديد",
+    "add_member":"اضافة عضو",
+    "member_name_is_required":"اسم العضو مطلوب",
+    "member_description_is_required":"وصف العضو مطلوب"
     }

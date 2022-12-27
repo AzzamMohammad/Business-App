@@ -118,16 +118,16 @@ class HomePageController extends GetxController{
   Future<void> GetNewAdminPostsListItem()async{
     State = false;
     List<FollowFacilityPost> NewItem = [];
-    while(!State){
-      NewItem = await homePageServer.GetNewAdminPostsItems(Token , NextAdminPostsPage);
-      State = homePageServer.IsLoaded;
-      print(State);
+    NewItem = await homePageServer.GetNewAdminPostsItems(Token , NextAdminPostsPage);
+    State = homePageServer.IsLoaded;
+    print(State);
+    if(!State) {
+      AdminPostsList.addAll(NewItem);
+      NumberOfAdminPostsList(AdminPostsList.length);
+      NextAdminPostsPage = homePageServer.NextPageUrl;
+      if (homePageServer.CurrentPage == homePageServer.LastPage)
+        ArrivedToAdminPostsListEnd = true;
     }
-    AdminPostsList.addAll(NewItem);
-    NumberOfAdminPostsList (AdminPostsList.length) ;
-    NextAdminPostsPage = homePageServer.NextPageUrl;
-    if(homePageServer.CurrentPage == homePageServer.LastPage)
-      ArrivedToAdminPostsListEnd = true;
   }
 
   void RefreshPage(){

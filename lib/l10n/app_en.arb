@@ -463,6 +463,103 @@
    "no_data_to_display":"No data to display",
    "@language":{
        "description":"No data to display"
+   },
+
+
+   "setting":"Setting",
+   "@language":{
+       "description":"Setting"
+   },
+
+
+   "change_language":"Change Language",
+   "@language":{
+       "description":"change_language"
+   },
+
+
+   "logout":"Logout",
+   "@language":{
+       "description":"logout"
+   },
+
+
+   "un_block":"Unblock",
+   "@language":{
+       "description":"Unblock"
+   },
+
+
+   "block":"Block",
+   "@language":{
+       "description":"block"
+   },
+
+
+   "no_message_yet":"No message yet..",
+   "@language":{
+       "description":"no_message_yet..."
+   }
+,
+
+
+   "blocked":"Blocked",
+   "@language":{
+       "description":"blocked..."
+   },
+
+
+   "you_can_not_send_to_this_person":"You can not send to this person ^_^ !",
+   "@language":{
+       "description":"You can not send to this person"
+   },
+
+
+   "your_message":"Your message...",
+   "@language":{
+       "description":"Your message..."
+   },
+
+
+   "my_facilities":"My facilities",
+   "@language":{
+       "description":"my_facilities"
+   },
+
+
+   "start_your_business":"Start your business",
+   "@language":{
+       "description":"Start your business"
+   },
+
+
+   "neww":"New",
+   "@language":{
+       "description":"New"
+   },
+
+
+   "new_member":"New member",
+   "@language":{
+       "description":"new member"
+   },
+
+
+   "add_member":"Add member",
+   "@language":{
+       "description":"Add member"
+   },
+
+
+   "member_name_is_required":"Member name is required",
+   "@language":{
+       "description":"Member name is required"
+   },
+
+
+   "member_description_is_required":"Member description is required",
+   "@language":{
+       "description":"Member Description is required"
    }
 
 

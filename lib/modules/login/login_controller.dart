@@ -3,6 +3,7 @@ import 'package:business_01/storage/shared_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../components/handling_chat.dart';
 import '../../config/pusher_config.dart';
 
 class LoginController extends GetxController{
@@ -33,6 +34,7 @@ class LoginController extends GetxController{
    isConfirm = loginServer.isConfirm;
    if(state == true){
      LaravelEcho.init(Token: await sharedData.GetToken());
+     ListenToThePusherUserChatChannel(await sharedData.GetUserID() ,await sharedData.GetToken());
    }
   }
 

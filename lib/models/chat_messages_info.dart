@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:better_video_player/better_video_player.dart';
 import 'package:get/get.dart';
@@ -72,6 +73,8 @@ class ChatMessage {
     this.message,
     this.photo,
     this.video,
+    this.LoadSendImage,
+    this.LocalSendVideo,
     this.messageReplay,
     required this.createdAt,
     this.messageTextReplay,
@@ -91,6 +94,8 @@ class ChatMessage {
   dynamic messageTextReplay;
   dynamic messagePhotoReplay;
   dynamic messageVideoReplay;
+  File? LoadSendImage;
+  File? LocalSendVideo;
   BetterVideoPlayerController betterVideoPlayerController = BetterVideoPlayerController();
   var MessageState = ''.obs;//  Is = 'sending' || 'failed' || 'arrive' || 'read'
 

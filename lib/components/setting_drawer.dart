@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 import 'package:business_01/components/loading/loding_message.dart';
 import 'package:business_01/l10n/l10n.dart';
@@ -22,7 +23,7 @@ Widget BuildSettingDrawer(BuildContext context) {
         padding: EdgeInsets.all(20),
         children: [
           Text(
-            'Setting',
+            '${AppLocalizations.of(context)!.setting}',
             style: TextStyle(
                 color: Theme.of(context).colorScheme == ColorScheme.light()
                     ? Color(0xff076579)
@@ -44,7 +45,7 @@ Widget BuildSettingDrawer(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Change language',
+                    '${AppLocalizations.of(context)!.change_language}',
                     overflow: TextOverflow.ellipsis,
                   ),
                   DropdownMenuItem(
@@ -96,22 +97,22 @@ Widget BuildSettingDrawer(BuildContext context) {
           Divider(
             thickness: 1,
           ),
-          ListTile(
-            onTap: () {
-              BuildComplaintCard(context);
-            },
-            leading: Icon(Icons.contact_support_outlined),
-            title: Text('Help center'),
-          ),
-          Divider(
-            thickness: 1,
-          ),
+          // ListTile(
+          //   onTap: () {
+          //     BuildComplaintCard(context);
+          //   },
+          //   leading: Icon(Icons.contact_support_outlined),
+          //   title: Text('Help center'),
+          // ),
+          // Divider(
+          //   thickness: 1,
+          // ),
           ListTile(
             onTap: () {
               Logout(context);
             },
             leading: Icon(Icons.logout_outlined),
-            title: Text('Logout'),
+            title: Text('${AppLocalizations.of(context)!.logout}'),
           ),
           Divider(
             thickness: 1,

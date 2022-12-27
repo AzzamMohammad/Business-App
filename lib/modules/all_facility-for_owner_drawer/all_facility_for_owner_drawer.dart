@@ -1,6 +1,7 @@
 import 'package:business_01/modules/all_facility-for_owner_drawer/all_facility_for_owner_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 import '../../components/cach_image_from_network.dart';
 import '../../components/loading/loading_members.dart';
@@ -23,7 +24,7 @@ Widget BuildAllFacilityForOwner(BuildContext context){
                   Expanded(
                     child: Container(
                       child: Text(
-                        'My facilities',
+                        '${AppLocalizations.of(context)!.my_facilities}',
                         style: TextStyle(
                             color: Theme.of(context).colorScheme == ColorScheme.light()
                                 ? Color(0xff076579)
@@ -49,7 +50,7 @@ Widget BuildAllFacilityForOwner(BuildContext context){
                     return Column(
                       children: [
                         Center(
-                          child: Text('Start your business'),
+                          child: Text('${AppLocalizations.of(context)!.start_your_business}'),
                         ),
                         BuildAddFacility(context),
                       ],
@@ -94,7 +95,7 @@ Widget BuildAllFacilityForOwner(BuildContext context){
 Widget BuildFacilityCard(BuildContext context , int Index){
   return GestureDetector(
     onTap: (){
-      Get.toNamed('/facility',arguments: {'facility_id':allFacilityForOwnerController.FacilitiesList[Index].id,'is_user':false});
+      Get.offAllNamed('/facility',arguments: {'facility_id':allFacilityForOwnerController.FacilitiesList[Index].id,'is_user':false});
     },
     child: Container(
       child: Padding(
@@ -138,7 +139,7 @@ Widget BuildAddFacility (BuildContext context){
           color: Color(0xff076579)
       ),
       child: Center(
-        child: Text('New',style: TextStyle(color: Color(0xffefefef),),),
+        child: Text('${AppLocalizations.of(context)!.neww}',style: TextStyle(color: Color(0xffefefef),),),
       ),
     ),
   );

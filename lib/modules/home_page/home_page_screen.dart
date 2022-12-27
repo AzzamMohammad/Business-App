@@ -96,7 +96,7 @@ class HomePageScreen extends StatelessWidget {
                                 .of(context)
                                 .size
                                 .height * .4,
-                            enableInfiniteScroll: !homePageController.ArrivedToAdminPostsListEnd ? false : true,
+                            // enableInfiniteScroll: !homePageController.ArrivedToAdminPostsListEnd ? false : true,
                             autoPlay: true,
                             autoPlayAnimationDuration: Duration(seconds:2),
                             initialPage: InitAdminPostsPage,
@@ -114,12 +114,14 @@ class HomePageScreen extends StatelessWidget {
                                 homePageController.NumberOfAdminPostsList.value) {
                               var IsOpen = false.obs;
                               print('index : ${itemIndex}');
+                              print(homePageController.NumberOfAdminPostsList.value);
                               InitAdminPostsPage = itemIndex-1;
                               return AdminPostCard(itemIndex, context, IsOpen);
                             } else {
                               if (!homePageController
                                   .ArrivedToAdminPostsListEnd) {
-                                  GetNewAdminPost();
+                                print('ffffffffffffffffff');
+                                GetNewAdminPost();
                                 return LoadingAdminPost(context);
                               }
                               return Container();

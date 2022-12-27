@@ -5,6 +5,7 @@ import 'package:business_01/storage/shared_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../../components/handling_chat.dart';
 import '../../models/facility_images_pagination.dart';
 import '../../models/facility_info.dart';
 import '../../models/facility_posts_pagination.dart';
@@ -96,10 +97,16 @@ class FacilityController extends GetxController{
   void onReady() async{
      await GetFacilityInfo();
      await GetLastFacilityImagePage();
+     ListenToPusherFacility();
     // GetMoreJobsToList();
     super.onReady();
   }
 
+@override
+  void onClose() {
+  LeavePusherFacility();
+    super.onClose();
+  }
 
   @override
   void dispose() {
@@ -231,5 +238,15 @@ class FacilityController extends GetxController{
     GetNewOffer();
   }
 
+
+  void ListenToPusherFacility()async{
+    LeavePusherUserChatChannel(await sharedData.GetUserID());
+    ListenToThePusherFacilityChatChannel(FacilityId,Token);
+  }
+
+  void LeavePusherFacility()async{
+    LeavePusherFacilityChatChannel(FacilityId);
+    ListenToThePusherUserChatChannel(await sharedData.GetUserID(),Token);
+  }
 
 }

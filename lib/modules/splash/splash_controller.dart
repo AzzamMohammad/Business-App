@@ -99,8 +99,7 @@ class SplashController extends GetxController {
     if (state) {
       Get.offAllNamed('/home_page');
       LaravelEcho.init(Token: await sharedData.GetToken());
-      print(LaravelEcho.SocketId);
-      ListenToThePusherUserChatChannel(await sharedData.GetUserID() );
+      ListenToThePusherUserChatChannel(await sharedData.GetUserID() ,await sharedData.GetToken());
     } else {
       if (splashServer.isConfirm) {
         Get.offAllNamed('/login');

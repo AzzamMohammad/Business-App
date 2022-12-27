@@ -64,6 +64,7 @@ dependencies:
   better_video_player: ^1.2.8
   file_picker: ^4.6.0
   internet_connection_checker: ^1.0.0+1
+  better_player: ^0.0.83
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:better_video_player/better_video_player.dart';
 import 'package:business_01/components/my_divider.dart';
 import 'package:business_01/modules/chat_messages/chat_messages_controller.dart';
@@ -73,7 +75,7 @@ class ChatMessagesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Block',
+                      '${AppLocalizations.of(context)!.block}',
                       style: TextStyle(),
                     ),
                     Icon(
@@ -93,7 +95,7 @@ class ChatMessagesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Unblock',
+                      '${AppLocalizations.of(context)!.un_block}',
                       style: TextStyle(),
 
                     ),
@@ -184,7 +186,7 @@ class ChatMessagesScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('You can not send to this person ^_^ !')
+                  Text('${AppLocalizations.of(context)!.you_can_not_send_to_this_person}')
                 ],
               ) : BuildSendBar(context)
             ],
@@ -251,6 +253,7 @@ class ChatMessagesScreen extends StatelessWidget {
                   ),
 
                   child: MessageContent(context,
+                      null,null,
                       chatMessagesController.ChatMessagesList[index].messagePhotoReplay,
                       chatMessagesController.ChatMessagesList[index].messageVideoReplay,
                       null,
@@ -272,6 +275,8 @@ class ChatMessagesScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: MessageContent(context,
+                          chatMessagesController.ChatMessagesList[index].LoadSendImage != null ? chatMessagesController.ChatMessagesList[index].LoadSendImage :null,
+                          chatMessagesController.ChatMessagesList[index].LocalSendVideo!= null ? chatMessagesController.ChatMessagesList[index].LocalSendVideo : null,
                           chatMessagesController.ChatMessagesList[index].photo,
                           chatMessagesController.ChatMessagesList[index].video,
                           chatMessagesController.ChatMessagesList[index].betterVideoPlayerController,
@@ -359,7 +364,7 @@ class ChatMessagesScreen extends StatelessWidget {
     );
   }
 
-  Widget MessageContent(BuildContext context , dynamic image ,dynamic video,BetterVideoPlayerController? betterVideoPlayerController , dynamic MessageText){
+  Widget MessageContent(BuildContext context ,File? LoadSendImage,File? LoadSendVideo, dynamic image ,dynamic video,BetterVideoPlayerController? betterVideoPlayerController , dynamic MessageText){
    var DisplayVideo = false.obs;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -378,22 +383,27 @@ class ChatMessagesScreen extends StatelessWidget {
                     print(err);
                   },
                   fit: BoxFit.cover,
-                )
-            )
-        ):Container(),
-        video != null ?(
-        Obx((){
+                ),
+            ),
+
+        ):LoadSendImage != null ? Container(width: MediaQuery.of(context).size.width * .58,
+    height: 150,child :Image.file(chatMessagesController.LoadingImage!,fit: BoxFit.cover,),):Container(),
+        video != null ||LoadSendVideo != null? Obx((){
           if(DisplayVideo.value){
-            return BuildVideoNetworkWidget(
-                context,
-                video,
-                betterVideoPlayerController
-            );
+            if(video != null)
+              return BuildVideoNetworkWidget(
+                  context,
+                  video,
+                  betterVideoPlayerController!
+              );
+            else{
+              return BuildVideoFileWidget(context,LoadSendVideo!.path ,betterVideoPlayerController!);
+            }
           }
           else{
             return GestureDetector(
               onTap: (){
-               DisplayVideo(true);
+                DisplayVideo(true);
               },
               child: Container(
                   width: MediaQuery.of(context).size.width * .58,
@@ -409,9 +419,8 @@ class ChatMessagesScreen extends StatelessWidget {
               ),
             );
           }
-        })
-        )
-    :Container(),
+        }):Container(),
+
         MessageText != null ?
         Container(child: Text('${MessageText}')):Container()
       ],
@@ -437,7 +446,7 @@ class ChatMessagesScreen extends StatelessWidget {
                 minLines: 1,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(left: 10 , right: 10),
-                  hintText: 'Your message...',
+                  hintText: '${AppLocalizations.of(context)!.your_message}',
                 ),
                 onChanged: (value){
                   chatMessagesController.MessageTextContent = value;

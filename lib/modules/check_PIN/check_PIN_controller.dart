@@ -3,6 +3,7 @@ import 'package:business_01/storage/shared_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../../components/handling_chat.dart';
 import '../../config/pusher_config.dart';
 class CheckPINController extends GetxController {
   late String PIN;
@@ -33,6 +34,8 @@ class CheckPINController extends GetxController {
     messageNext = checkPINServer.message;
     if(stateNext == true){
       LaravelEcho.init(Token: await sharedData.GetToken());
+      ListenToThePusherUserChatChannel(await sharedData.GetUserID() ,await sharedData.GetToken());
+
     }
   }
 

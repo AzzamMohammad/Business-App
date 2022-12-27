@@ -46,7 +46,7 @@ class AllChatScreen extends StatelessWidget {
         key: _scaffoldKey,
         appBar: AppBar(
           title: Text(
-            'Chat',
+            '${AppLocalizations.of(context)!.chat}',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
           actions: [
@@ -174,7 +174,7 @@ class AllChatScreen extends StatelessWidget {
                 ),
               ),
             ],
-          ) : Text('No message yet..')):Text('Blocked',style: TextStyle(color: Colors.red),),
+          ) : Text('${AppLocalizations.of(context)!.no_message_yet}')):Text('${AppLocalizations.of(context)!.blocked}',style: TextStyle(color: Colors.red),),
           trailing: PopupMenuButton<Widget>(
             position: PopupMenuPosition.over,
             constraints: BoxConstraints(
@@ -192,7 +192,7 @@ class AllChatScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Block',
+                      '${AppLocalizations.of(context)!.block}',
                       style: TextStyle(),
                     ),
                     Icon(
@@ -208,7 +208,7 @@ class AllChatScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Unblock',
+                      '${AppLocalizations.of(context)!.un_block}',
                       style: TextStyle(),
                     ),
                     Icon(
@@ -368,7 +368,7 @@ class AllChatScreen extends StatelessWidget {
   }
 
   void GoToChat(int ChatId , String UserName , String? ImageUrl,bool IsBlock){
-    Get.toNamed('/chat_messages',arguments: {'chat_id':ChatId,'User_name':UserName,'user_image':ImageUrl,'IsFoundation':allChatController.IsFacility,'Chat_is_blocked': IsBlock});
+    Get.toNamed('/chat_messages',arguments: {'User_name':UserName,'user_image':ImageUrl,'IsFoundation':allChatController.IsFacility,'Chat_is_blocked': IsBlock},parameters: {'chat_id':ChatId.toString(),});
   }
 
 }

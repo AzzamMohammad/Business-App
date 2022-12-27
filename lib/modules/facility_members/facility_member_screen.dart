@@ -119,7 +119,7 @@ class FacilityMembersScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                   label: Text(
-                    'new member',
+                    '${AppLocalizations.of(context)!.new_member}',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -305,7 +305,7 @@ class FacilityMembersScreen extends StatelessWidget {
 
   void AddNewMember(BuildContext context) async {
     AddAndEditMembers AddMember =
-    AddAndEditMembers(context: context, cardType: 'Add member');
+    AddAndEditMembers(context: context, cardType: '${AppLocalizations.of(context)!.add_member}');
     AddMember.NewAddAndEditMember(() {
       SendNewMemberToAdd(context, AddMember);
     });
@@ -321,7 +321,7 @@ class FacilityMembersScreen extends StatelessWidget {
           Theme.of(context).scaffoldBackgroundColor,
           Theme.of(context).primaryColor,
           Theme.of(context).primaryColor,
-          'Member name is required',
+          '${AppLocalizations.of(context)!.member_name_is_required}',
           true);
     }
     if (NewMember.memberDescription == null) {
@@ -329,7 +329,7 @@ class FacilityMembersScreen extends StatelessWidget {
           Theme.of(context).scaffoldBackgroundColor,
           Theme.of(context).primaryColor,
           Theme.of(context).primaryColor,
-          'Member Description is required',
+          '${AppLocalizations.of(context)!.member_description_is_required}',
           true);
     }
     facilityMemberController.MemberName = NewMember.memberName!;
@@ -381,7 +381,7 @@ class FacilityMembersScreen extends StatelessWidget {
           Theme
               .of(context)
               .primaryColor,
-          'Member name is required',
+          '${AppLocalizations.of(context)!.member_name_is_required}',
           true);
     }
     if (EditMember.memberDescription == '') {
@@ -395,7 +395,7 @@ class FacilityMembersScreen extends StatelessWidget {
           Theme
               .of(context)
               .primaryColor,
-          'Member Description is required',
+          '${AppLocalizations.of(context)!.member_description_is_required}',
           true);
     }
 
